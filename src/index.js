@@ -1,19 +1,30 @@
 import cipher from './cipher.js';
 
-let buttonCipher=document.getElementById("button-cipher");
+    let initialMessage= document.getElementById("initial-message");
+    let keyCipher=document.getElementById("key-cipher");
+    let buttonCipher=document.getElementById("button-cipher");
+    let buttonDecipher=document.getElementById("button-decipher");
+
 
 buttonCipher.addEventListener("click",()=>{
-    let initialMessage = document.getElementById("initial-message").value;
+    let initialMessage= document.getElementById("initial-message").value;
     let keyCipher=document.getElementById("key-cipher").value;
-    let divide=initialMessage.split("");
-    let newNumbers={};
-    for(let i=0;i<divide.length;i++){
-    newNumbers[i]=divide[i].charCodeAt(); 
-    } 
-    return newNumbers;
+    cipher.encode(initialMessage,keyCipher)
     
-
+    
 });
+
+buttonDecipher.addEventListener("click",()=>{
+    let initialMessage= document.getElementById("initial-message").value;
+    let keyCipher=document.getElementById("key-cipher").value;
+    cipher.decode(initialMessage,keyCipher)
+    
+    
+});
+
+
+
+
 
 
 console.log(cipher);

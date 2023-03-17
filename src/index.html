@@ -11,16 +11,16 @@
     
 
     <form id="formulario">
-    <input type="text" id="initial-message" class="message1"  name="message" >
+    <input type="text" id="initial-message" class="message1" autocomplete="off" name="message" >
     <br><br>
     <label for="key-cipher" class="offset">Clave para descrifrar o cifrar</label>
     <input type="number" id="key-cipher" name="num" min="0" max="26"><br><br>
     <input type="button" id="button-cipher" class="options" value="CIFRAR">
     <input type="button" id="button-decipher"  class="options" value="DESCIFRAR"> <br><br>
 
-    <input type="text" id="final-message" class="message1" name="message2" >
+    <input type="text" id="final-message" class="message1" readonly name="message2" >
   </form>
     </div>
     <script src="index.js" type="module"></script>
   </body>
-</html>
+</html> 
