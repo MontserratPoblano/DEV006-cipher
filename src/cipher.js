@@ -1,43 +1,40 @@
 const cipher = {
-
-  // ...
-   encode: function(initialMessage,keyCipher){
-    let finalMesagge=document.getElementById("final-message");
-    let newNumbers=[];
-    let letterCode=[];
+  encode: function(keyCipher,initialMessage){
+    
+    const newNumbers=[];
+    const letterCode=[];
+    if(initialMessage===null || keyCipher===null || initialMessage===0 || keyCipher===0)throw new TypeError("invalid")
     
     for(let i=0;i<initialMessage.length;i++){
       newNumbers[i]=initialMessage[i].charCodeAt();
-     if(newNumbers[i]===32){
-        letterCode[i]=newNumbers[i]  
-        }else {
+      if(newNumbers[i]>=65 && newNumbers[i]<=90 ){
         letterCode[i]=(Number(newNumbers[i])+Number(keyCipher)-65)%26+65;        
+      } 
     }
-  }
-    console.log (letterCode)
-    let final=letterCode.map(element => (String.fromCharCode(element)));
-  
-     finalMesagge.value="Tu mensaje cifrado es " + final.join(" ")
+    const final=letterCode.map(element => (String.fromCharCode(element))).join("");
+    return final;
+    
+    
+    
+    
   },
 
-  decode: function(initialMessage,keyCipher){
-    let finalMesagge=document.getElementById("final-message");
-    let newNumbers=[];
-    let letterCode=[];
+  decode: function(keyCipher,initialMessage){
+    const newNumbers=[];
+    const letterCode=[];
+    if(initialMessage===null || keyCipher===null || initialMessage===0 || keyCipher===0)throw new TypeError("invalid")
     for(let i=0;i<initialMessage.length;i++){
       newNumbers[i]=initialMessage[i].charCodeAt();
-     if(newNumbers[i]===32){
-        letterCode[i]=newNumbers[i]  
-        }else {
+      if(newNumbers[i]>=65 && newNumbers[i]<=90){
         letterCode[i]=(Number(newNumbers[i])-Number(keyCipher)+65)%26+65;        
+      }
     }
-  }
-    console.log (letterCode)
-    let final=letterCode.map(element => (String.fromCharCode(element)));
-  
-     finalMesagge.value="Tu mensaje cifrado es " + final.join(" ")
+    const final=letterCode.map(element => (String.fromCharCode(element))).join("");
+    return final 
   }
 }
+
+
   
     
 

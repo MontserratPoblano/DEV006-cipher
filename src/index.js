@@ -1,29 +1,31 @@
 import cipher from './cipher.js';
 
-    let initialMessage= document.getElementById("initial-message");
-    let keyCipher=document.getElementById("key-cipher");
-    let buttonCipher=document.getElementById("button-cipher");
-    let buttonDecipher=document.getElementById("button-decipher");
+const buttonCipher=document.getElementById("button-cipher");
+const buttonDecipher=document.getElementById("button-decipher");
+const buttonVolver=document.getElementById("button-volver");
 
 
 buttonCipher.addEventListener("click",()=>{
-    let initialMessage= document.getElementById("initial-message").value;
-    let keyCipher=document.getElementById("key-cipher").value;
-    cipher.encode(initialMessage,keyCipher)
-    
-    
-});
-
-buttonDecipher.addEventListener("click",()=>{
-    let initialMessage= document.getElementById("initial-message").value;
-    let keyCipher=document.getElementById("key-cipher").value;
-    cipher.decode(initialMessage,keyCipher)
-    
+  const initialMessage= document.getElementById("initial-message").value;
+  const keyCipher=document.getElementById("key-cipher").value;
+  const encodeMessage=cipher.encode(keyCipher,initialMessage)
+  const finalMesagge=document.getElementById("final-message");
+  finalMesagge.value=encodeMessage;
     
 });
 
+buttonDecipher.addEventListener("click",()=>{ 
+  const initialMessage= document.getElementById("initial-message").value;
+  const keyCipher=document.getElementById("key-cipher").value;
+  const decodeMessage=cipher.decode(keyCipher,initialMessage)
+  const finalMesagge = document.getElementById("final-message");
+  finalMesagge.value=decodeMessage;
+});
 
-
+buttonVolver.addEventListener("click",()=>{
+  const formulario=document.getElementById("formulario");
+  formulario.reset();
+});
 
 
 
