@@ -12,10 +12,10 @@ h1 {
    text-align: center;
    text-shadow: 1px 1px 2px black;
    background:#FBFFB1;
-   margin-top: 5px;
+   margin-top: 15px;
    margin-bottom: 15px;
     border-radius: 35px 35px 35px 35px;
-    padding: 30px;
+    padding: 20px;
   }
 
 
@@ -83,7 +83,7 @@ h1 {
 
   legend{
     font-family:papyrus;
-    font-size: 20px;
+    font-size: 18px;
     font-weight:bold;
     color:#C92C6D;
   
