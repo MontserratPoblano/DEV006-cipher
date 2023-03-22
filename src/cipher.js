@@ -9,7 +9,7 @@ const cipher = {
       newNumbers[i]=initialMessage[i].charCodeAt();
       if(newNumbers[i]>=65 && newNumbers[i]<=90 ){
         letterCode[i]=(Number(newNumbers[i])+Number(keyCipher)-65)%26+65;        
-      } 
+      } else if(newNumbers[i]===32){letterCode[i]=newNumbers[i]}
     }
     const final=letterCode.map(element => (String.fromCharCode(element))).join("");
     return final;
@@ -27,7 +27,7 @@ const cipher = {
       newNumbers[i]=initialMessage[i].charCodeAt();
       if(newNumbers[i]>=65 && newNumbers[i]<=90){
         letterCode[i]=(Number(newNumbers[i])-Number(keyCipher)+65)%26+65;        
-      }
+      } else if(newNumbers[i]===32){letterCode[i]=newNumbers[i]}
     }
     const final=letterCode.map(element => (String.fromCharCode(element))).join("");
     return final 
