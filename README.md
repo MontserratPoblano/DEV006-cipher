@@ -1,6 +1,8 @@
- ##Introducción
+ ## Introducción
+
 Este proyecto esta basado en el cifrado cesar, también conocido como cifrado por desplazamiento, esta enfocado a todos aquellos usuarios que quieran mandar un mensaje secreto a esa persona especial o para aquellos que no quieran que alguien que no sea su persona de interés sepa lo que estan expresando, de una forma divertida y con algo de misterio.
-##Desarrollo del proyecto
+
+## Desarrollo del proyecto
 
 Los pasos que se siguieron para poder realizar este proyecto fueron los siguientes;
 
@@ -11,7 +13,8 @@ Los pasos que se siguieron para poder realizar este proyecto fueron los siguient
 
 El diseño se eligio basandome en algo muy basico, una sola pantalla en la cual se pudiera ingresar un mensaje y clave que permitieran descifrar o cifrar el mensaje oculto.
 
-###Instrucciones de uso
+### Instrucciones de uso
+
 Para su uso se deberan tomar en cuanta los siguientes pasos:
 
 1. Ingresar el mensaje que quieres cifrar o descifrar(en este paso solo deberas agregar mayúsculas y evitar caracteres especiales como por ejemplo la letra "Ñ")
