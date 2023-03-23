@@ -13,7 +13,7 @@ Los pasos que se siguieron para poder realizar este proyecto fueron los siguient
 
 El diseño se eligio basandome en algo muy basico, una sola pantalla en la cual se pudiera ingresar un mensaje y clave que permitieran descifrar o cifrar el mensaje oculto.
 
-### Instrucciones de uso
+## Instrucciones de uso
 
 Para su uso se deberan tomar en cuanta los siguientes pasos:
 
